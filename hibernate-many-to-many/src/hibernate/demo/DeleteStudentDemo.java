@@ -10,7 +10,7 @@ import hibernate.entity.InstructorDetail;
 import hibernate.entity.Review;
 import hibernate.entity.Student;
 
-public class GetCoursesForStudentDemo {
+public class DeleteStudentDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,11 +28,9 @@ public class GetCoursesForStudentDemo {
 			//begin transaction
 			session.beginTransaction();
 			
-			int id = 1;
+			int id = 2;
 			Student student = session.get(Student.class, id);
-
-			System.out.println(student);
-			System.out.println(student.getCourses());
+			session.delete(student);
 
 			//commit
 			session.getTransaction().commit();
