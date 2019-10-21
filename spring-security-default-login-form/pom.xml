@@ -3,15 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>spring-security-demo</artifactId>
+	<artifactId>spring-security-default-login-form</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
 	<name>spring-security-demo</name>
 
 	<properties>
-		<springframework.version>5.0.2.RELEASE</springframework.version>
-
+		<springframework.version>5.2.0.RELEASE</springframework.version>
+		<springsecurity.version>5.2.0.RELEASE</springsecurity.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -23,6 +23,18 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-web</artifactId>
+		  <version>${springsecurity.version}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-config</artifactId>
+		  <version>${springsecurity.version}</version>
 		</dependency>
 
 		<!-- Servlet, JSP and JSTL support -->
@@ -63,7 +75,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>spring-security-demo</finalName>
+		<finalName>spring-security-default-login-form</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
