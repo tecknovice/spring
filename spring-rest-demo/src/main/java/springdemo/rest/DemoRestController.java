@@ -11,4 +11,8 @@ public class DemoRestController {
 	public String hello() {
 		return "hello world";
 	}
+	@GetMapping("/object")
+	public Object object() {
+		return new Object();
+	}
 }
