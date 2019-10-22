@@ -1,5 +1,8 @@
 package com.luv2code.springsecurity.demo.config;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,15 +14,21 @@ import org.springframework.security.core.userdetails.User.UserBuilder;
 @Configuration
 @EnableWebSecurity
 public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Autowired
+	private DataSource securityDataSource;
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		//add users for in memory authentication
-		UserBuilder users = User.withDefaultPasswordEncoder();
-		auth.inMemoryAuthentication()
-		.withUser(users.username("John").password("pass").roles("USER","MANAGER"))
-		.withUser(users.username("Mary").password("pass").roles("USER","MANAGER","ADMIN"))
-		.withUser(users.username("Jessica").password("pass").roles("USER"));
+//		UserBuilder users = User.withDefaultPasswordEncoder();
+//		auth.inMemoryAuthentication()
+//		.withUser(users.username("John").password("pass").roles("USER","MANAGER"))
+//		.withUser(users.username("Mary").password("pass").roles("USER","MANAGER","ADMIN"))
+//		.withUser(users.username("Jessica").password("pass").roles("USER"));
+		
+		//use jdbc authentication
+		auth.jdbcAuthentication().dataSource(securityDataSource);
 	}
 
 	@Override
