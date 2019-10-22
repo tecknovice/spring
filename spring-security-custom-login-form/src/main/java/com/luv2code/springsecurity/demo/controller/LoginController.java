@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class LoginController {
-	@GetMapping("/loginForm")
-	public String loginForm() {
+	@GetMapping("/login")
+	public String login() {
 		return "bootstrap-login-form";
+	}
+	@GetMapping("/access-denied")
+	public String accessDenied() {
+		return "access-denied";
 	}
 }
