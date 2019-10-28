@@ -20,7 +20,7 @@
     <!-- define the dependency -->
     <bean id="myFortune" class="springdemo.RandomFortuneService">
     </bean>
-    <bean id="myCoach" class="springdemo.TrackCoach"   init-method="init" destroy-method="destroy">
+    <bean id="myCoach" class="springdemo.TrackCoach" scope="singleton"  init-method="init" destroy-method="destroy">
     	<!-- setup the constructor injection -->
     	<constructor-arg ref="myFortune"/>
     </bean>	
