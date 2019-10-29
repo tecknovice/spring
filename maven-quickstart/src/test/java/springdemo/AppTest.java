@@ -1,4 +1,4 @@
-package mavendemo.quickstart;
+package springdemo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

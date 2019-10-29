@@ -1,4 +1,4 @@
-package mavendemo.quickstart;
+package springdemo;
 
 /**
  * Hello world!
