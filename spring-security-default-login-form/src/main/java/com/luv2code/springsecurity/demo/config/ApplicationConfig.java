@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.luv2code.springsecurity.demo")
-public class DemoAppConfig {
+public class ApplicationConfig {
 	
 	//define bean for viewResolver
 	@Bean

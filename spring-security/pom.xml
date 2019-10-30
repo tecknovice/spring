@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>spring-security-custom-login-form</artifactId>
+	<artifactId>spring-security</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-custom-login-form</name>
+	<name>spring-security</name>
 
 	<properties>
 		<springframework.version>5.2.0.RELEASE</springframework.version>
